@@ -1,0 +1,46 @@
+create database petshop
+default character set utf8
+default collate utf8_general_ci;
+
+use petshop;
+
+create table Cliente (
+    id integer primary key auto_increment,
+    nome_e_sobrenome varchar(50) not null,
+    email varchar(50) unique not null,
+    senha varchar(25),
+    celular varchar(15),
+    sexo boolean
+);
+
+create table Categorias (
+    id integer primary key auto_increment,
+    nome varchar(100) not null
+);
+
+create table Produtos (
+    id integer primary key auto_increment,
+    nomeProduto varchar(100) NOT NULL,
+    descricao TEXT,
+    preco FLOAT(10, 2) NOT NULL,
+    categoriaId INT,
+    estoque INT,
+    FOREIGN KEY (categoriaId) REFERENCES categorias(id)
+);
+
+create table Pedidos (
+    id integer primary key auto_increment,
+    total FLOAT(10, 2) NOT NULL,
+    Cliente.id INT,
+    data_compra DATE,
+    FOREIGN KEY (Cliente.id) REFERENCES Cliente(id)
+);
+
+create table Itens_pedido (
+    id integer primary key auto_increment,
+    produto_id INT,
+    quantidade INT NOT NULL,
+    pedido_id INT,
+    FOREIGN KEY (produto_id) REFERENCES produtos(id),
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id)
+);

@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ff6a00;
+    color: white;
+    height: 80px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .header-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+header img.logo {
+    height: 10vh;
+    width: auto;
+}
+
+header .icons {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.icons a{
+    text-decoration-line: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse (opcional) */
+}
+
+.icons i {
+    margin-left: 1rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+/* Seção principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    position: relative;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.main-content img {
+    max-width: 50vw;
+    height: auto;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-container::before,
+.logo-container::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #ff5722;
+    top: 100%;
+}
+
+.logo-container::before {
+    width: 90%;
+    left: 5%;
+    transform: translateY(10px);
+}
+
+.logo-container::after {
+    width: 70%;
+    right: 15%;
+    transform: translateY(30px);
+}
+
+.decorative-elements .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff6a00;
+}
+
+.circle.small {
+    width: 10vh;
+    height: 10vh;
+    bottom: 25vh;
+    left: 14vh;
+}
+
+.circle.big {
+    width: 30vh;
+    height: 30vh;
+    bottom: -8vh;
+    left: -15vh;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.circle.big1 {
+    width: 40vh;
+    height: 40vh;
+    bottom: 25vh;
+    right: -25vh;
+    clip-path: circle(50% at 50%);
+}
+
+.circle.small1 {
+    width: 5vh;
+    height: 5vh;
+    bottom: 25%;
+    left: 10vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte se não houver espaço */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+}
+
+
+h1{
+    text-align: center;
+    transform: translateY(-100px);
+    color: #ff6a00;
+}
+
+.cards {
+    background-color: white;
+    border-radius: 8px; /* Cantos arredondados */
+    margin: 10px; /* Espaçamento entre os cards */
+    padding: 10px; /* Espaçamento interno */
+    width: 150px; /* Largura fixa dos cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para os cards */
+    text-align: center; /* Centraliza o texto */
+}
+
+.cards img {
+    max-width: 100%; /* Faz com que a imagem não ultrapasse a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        height: 10px;
+    }
+
+    .header-content {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header i.fa-house {
+        font-size: 0.25rem;
+        margin-left: 1px;
+        cursor: pointer;
+    }
+
+    header img.logo {
+        position: absolute;
+        height: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5px;
+    }
+
+    .icons {
+        position: absolute;
+        transform: translatex(4%);
+        font-size: 0.1rem;
+        top: 65%;
+        right: 4rem;
+    }
+
+    .decorative-elements .circle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ff6a00;
+    }
+
+    .circle.small {
+        width: 8vh;
+        height: 8vh;
+        left: 11vh;
+        bottom: 15vh;
+    }
+
+    .circle.big {
+        width: 25vh;
+        height: 25vh;
+        bottom: -18%;
+        left: -14vh;
+    }
+
+    .circle.big1 {
+        width: 30vh;
+        height: 30vh;
+        right: -18vh;
+        bottom: 10vh;
+    }
+
+    .circle.small1 {
+        width: 4vh;
+        height: 4vh;
+        bottom: 24%;
+        left: 8vh;
+    }
+
+    .logo-container::before {
+        width: 80%;
+        height: 1px;
+        left: 8%;
+        transform: translateY(1px);
+    }
+
+    .logo-container::after {
+        width: 62%;
+        height: 1px;
+        right: 22%;
+        transform: translateY(8px);
+    }
+}

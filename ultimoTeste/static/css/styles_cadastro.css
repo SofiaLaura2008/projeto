@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ff6a00;
+    width: 100%;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img.logo {
+    height: 10vh;
+    width: auto;
+    margin-left: 2rem;
+}
+
+header .icons {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.icons a {
+    text-decoration-line: none;
+    justify-content: space-between;
+    color: white; 
+}
+
+.icons i {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/* Seção principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    justify-content: center;
+    height: 90vh;
+    position: relative;
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 0 20px; /* Adiciona um pouco de preenchimento à esquerda e à direita */
+}
+
+.logo1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -180px);
+}
+
+.logo1 img {
+    width: 80vw;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.form {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /* Alinha à esquerda */
+    margin-left: 0; /* Remove a margem à esquerda */
+    gap: 10px; /* Espaço entre os elementos */
+    margin-left: 8vw;
+}
+
+.form label {
+    font-size: 20px; /* Tamanho da fonte do rótulo */
+    color: white;
+    background-color: #F25F26;
+    border-radius: 12px;
+    padding: 5px;
+    width: 100%; /* Largura total do rótulo */
+}
+
+.form-control {
+    width: 500px; /* Largura total do campo */
+    max-width: 400px; /* Largura máxima do campo */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte do campo */
+    border: 1px solid #ccc; /* Borda do campo */
+    border-radius: 12px; /* Bordas arredondadas */
+    background-color: #D9D9D9;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    border-color: #ff7403; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.btn {
+    background-color: #f46026;
+    color: white; /* Cor do texto do botão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #ff6600; /* Cor do botão ao passar o mouse */
+}

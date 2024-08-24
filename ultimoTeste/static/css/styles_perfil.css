@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ff6a00;
+    width: 100%;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img.logo {
+    height: 10vh;
+    width: auto;
+}
+
+header .icons {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.icons a {
+    text-decoration-line: none;
+    justify-content: space-between;
+    color: white; 
+}
+
+.icons i {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/* Seção principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    position: relative;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.decorative-elements .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffa50080;
+}
+
+.circle.small {
+    width: 10vh;
+    height: 10vh;
+    bottom: 25vh;
+    left: 14vh;
+}
+
+.circle.big {
+    width: 30vh;
+    height: 30vh;
+    bottom: -8vh;
+    left: -15vh;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.circle.big1 {
+    width: 40vh;
+    height: 40vh;
+    bottom: 25vh;
+    right: -25vh;
+    clip-path: circle(50% at 50%);
+}
+
+.circle.small1 {
+    width: 5vh;
+    height: 5vh;
+    bottom: 25%;
+    left: 10vh;
+}
+
+/*caixa de login*/
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 900px;
+    max-width: 1000px;
+    padding-top: 8vh;
+    margin: 0 auto;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ff6600;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 600px;
+    max-width: 700px;
+}
+
+.login-header {
+    background-color: #ff6600;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.login-header i.fa-user-circle {
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.loginMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 100%;
+    max-width: 600;
+    padding: 25px;
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+h2 {
+    color: #f46026;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff6600;
+    color: white;
+}
+
+tr:hover {
+    background-color: #9f9f9f;
+}
+
+strong{
+    color: #f1f1f1;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

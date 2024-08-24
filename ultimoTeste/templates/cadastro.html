@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_cadastro.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-header">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Rabitto" class="logo">
+            </div>
+            <div class="icons">
+                <a href="">Sobre nós</a>
+                <a href="{{ url_for('home') }}">
+                    <i class="fas fa-house"></i>
+                </a>
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <a href="{{ url_for('login') }}">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="logo1">
+            <img src="{{ url_for('static', filename='img/logo1.png') }}" alt="Rabitto Pet Store">
+        </div>
+        
+        <div class="form">
+            <form method="POST" action="{{ url_for('cadastro') }}">  
+                {{ form.hidden_tag() }}
+                
+                <div class="label">
+                    {{ form.nomeSobrenome.label }}
+                </div>
+                <div>   
+                    {{ form.nomeSobrenome(class="form-control") }}
+                </div> 
+
+                <div>
+                    {{ form.email.label }}
+                </div>
+                <div>
+                    {{ form.email(class="form-control") }}
+                </div>
+
+                <div>
+                    {{ form.celular.label }}
+                </div>
+                <div>
+                    {{ form.celular(class="form-control") }}
+                </div>
+
+                <div>
+                    {{ form.sexo.label }}
+                </div>
+                <div>
+                    {{ form.sexo(class="form-control") }}
+                </div>
+
+                <div>
+                    {{ form.password.label }}
+                </div>
+                <div>
+                    {{ form.password(class="form-control") }}
+                </div>
+
+                <div>
+                    {{ form.confirm_password.label }}
+                </div>
+                <div>
+                    {{ form.confirm_password(class="form-control") }}
+                </div>
+
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="error">{{ error }}</div>
+                    {% endfor %}
+                {% endfor %}
+
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
